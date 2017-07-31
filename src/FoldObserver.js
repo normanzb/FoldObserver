@@ -43,7 +43,7 @@ define(['./Defer'], function(Defer){
                                 if (node.nodeType !== 1) {
                                     continue;
                                 }
-                                if (node.tagName === 'body') {
+                                if (node.tagName === 'BODY') {
                                     bodyObserver.takeRecords();
                                     bodyObserver.disconnect();
                                     rs();
