@@ -23,15 +23,12 @@ define(['./Defer'], function(Defer){
             }
         }
 
-        if (!window.MutationObserver || !document.scrollingElement) {
+        if (!window.MutationObserver || !('scrollingElement'  in document)) {
             if (typeof me.onFailed === 'function') {
                 me.onFailed();
             }
             return;
         }
-
-        fold.height = document.scrollingElement.scrollTop + window.innerHeight;
-        fold.width = document.scrollingElement.scrollLeft + window.innerWidth;
 
         return new Defer.Promise(function(rs){
                 if (document.body) {
@@ -58,6 +55,9 @@ define(['./Defer'], function(Defer){
                 }
             })
             .then(function(){
+                fold.height = document.scrollingElement.scrollTop + window.innerHeight;
+                fold.width = document.scrollingElement.scrollLeft + window.innerWidth;
+
                 var observer = new MutationObserver(function(mutations){
                     for(var mutationLength = mutations.length; mutationLength--;) {
                         mutation = mutations[mutationLength];
