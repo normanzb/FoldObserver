@@ -1,0 +1,29 @@
+{
+  "name": "FoldObserver",
+  "authors": [
+    "Norman Xu <im@norm.im>"
+  ],
+  "description": "Dynamically detects where is your page \"folded\" at. It helps when you want to download scripts thtat required before the page fold, make it easier to optimise \"first meaning content\" interactive timing.",
+  "main": "./src/FoldObserver.js",
+  "keywords": [
+    "fold",
+    "page",
+    "fold",
+    "detection",
+    "page",
+    "fold",
+    "detection"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "compact-promise": "^2.1.0"
+  }
+}
