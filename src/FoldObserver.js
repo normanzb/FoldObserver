@@ -98,4 +98,6 @@ define(['./Defer'], function(Defer){
             me.mutationObserver = null;
         }
     };
+
+    return FoldObserver;
 });
