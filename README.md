@@ -1,1 +1,5 @@
-Dynamically detects where is your page "folded" at. It helps when you want to download scripts thtat required before the page fold, make it easier to optimise "first meaning content" interactive timing.
+This lib detects the page ["fold"](https://en.wikipedia.org/wiki/Above_the_fold) so that you can:
+
+* Load script immediately after the fold so important message above the fold gets delivered quicker.
+* Measure the timing when fold is visible to user
+* You name it...
